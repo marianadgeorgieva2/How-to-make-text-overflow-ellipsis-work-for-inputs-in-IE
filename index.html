@@ -18,22 +18,22 @@
 		</style>
 	</head>
 	<body>
-			<div class="long-value-input-container">
-				<input type="text" value="sdghkjsdghhjdfgjhdjghjdfhghjhgkdfgjnfkdgnjkndfgjknk" class="long-value-input" readonly />
-			</div>
+		<div class="long-value-input-container">
+			<input type="text" value="sdghkjsdghhjdfgjhdjghjdfhghjhgkdfgjnfkdgnjkndfgjknk" class="long-value-input" readonly />
+		</div>
 
-			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-			<script>
-				//	making the input editable
-				$( '.long-value-input' ).on( 'click', function() {
-					$( this ).prop( 'readonly', '' );
-					$( this ).focus();
-				})
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+			//	making the input editable
+			$( '.long-value-input' ).on( 'click', function() {
+				$( this ).prop( 'readonly', '' );
+				$( this ).focus();
+			})
 
-				// making the input readonly
-				$( '.long-value-input' ).on( 'blur', function() {
-					$( this ).prop( 'readonly', 'readonly' );
-				})
-			</script>
+			// making the input readonly
+			$( '.long-value-input' ).on( 'blur', function() {
+				$( this ).prop( 'readonly', 'readonly' );
+			})
+		</script>
 	</body>
 </html>
