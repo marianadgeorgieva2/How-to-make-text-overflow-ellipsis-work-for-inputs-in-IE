@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			/*Removing IE10's “clear field” X button*/
+			::-ms-clear {
+				display: none;
+			}
+			.long-value-input {
+				width: 200px;
+				height: 30px;
+				padding: 0 10px;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+			}
+
+		</style>
+	</head>
+	<body>
+			<div class="long-value-input-container">
+				<input type="text" value="sdghkjsdghhjdfgjhdjghjdfhghjhgkdfgjnfkdgnjkndfgjknk" class="long-value-input" readonly />
+			</div>
+
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+			<script>
+				//	making the input editable
+				$( '.long-value-input' ).on( 'click', function() {
+					$( this ).prop( 'readonly', '' );
+					$( this ).focus();
+				})
+
+				// making the input readonly
+				$( '.long-value-input' ).on( 'blur', function() {
+					$( this ).prop( 'readonly', 'readonly' );
+				})
+			</script>
+	</body>
+</html>
